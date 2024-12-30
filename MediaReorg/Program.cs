@@ -81,7 +81,7 @@ app.AddCommand("start", ([Argument] string inputDir, [Argument] string outputDir
         Console.WriteLine($"Successfully processed {file}");
     }
 
-    File.WriteAllLines(outputDir + "/processedTracks.txt", processedTracks);
+    File.WriteAllLines(Path.Combine(outputDir, "processedTracks.txt"), processedTracks);
 });
 
 app.Run();

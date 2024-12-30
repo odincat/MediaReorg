@@ -1,12 +1,12 @@
 # MediaReorg
 ## Introduction
-This tools reorganizes your music collection into to the directory structure that [Jellyfin](https://jellyfin.org/) expects, based on the Tags of your music files. It also renames the files like this: `{title} - {artist}.{extension}`. Additionally, when a file is processed, its MD5 hash is stored in a file in the output directory, to avoid unnecessary processing.
+This tool reorganizes your music collection into the [directory structure](https://jellyfin.org/docs/general/server/media/music/) that [Jellyfin](https://jellyfin.org/) expects, based on the tags of your music files. It also renames the files like this: `{title} - {artist}.{extension}`. Additionally, when a file is processed, its MD5 hash is used to avoid unnecessary copying in the future (`processedTracks.txt`).
 
 **Please ensure that all of your music files have the correct tags set, before using this.**
 
-The CLI tool expects that all of the files are in the same directory (not nested!).
+The CLI tool expects that all the files are in the same directory (not nested!).
 
-Also, by default only `.flac` files will be processed. If you want to process other file types, you can modify the `allowedFileExtensions` list in `Program.cs`.
+Also, by default, only `.flac` files will be processed. If you want to process other file types, you can modify the `allowedFileExtensions` list in `Program.cs`.
 
 ## Usage
 Assuming you are in the `MediaReorg` directory and have .NET 9 installed:
