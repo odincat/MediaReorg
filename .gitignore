@@ -1,0 +1,5 @@
+queue/
+output/
+MediaReorg/bin/
+MediaReorg/obj/
+.DS_Store
